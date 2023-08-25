@@ -1,4 +1,4 @@
-def calculate_minimum_wire_length(graph, start):
+def dijst(graph, start):
     n = len(graph)
     distances = [float('inf')] * n
     distances[start] = 0
@@ -20,6 +20,6 @@ graph = [
 ]
 device = 0  # The device to calculate the minimum wire length for
 
-distances = calculate_minimum_wire_length(graph, device)
+distances = dijst(graph, device)
 print(
     f"The minimum wire lengths to connect device {device} to all other devices are: {distances}")
